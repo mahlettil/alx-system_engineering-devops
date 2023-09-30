@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -m
+( echo "#!/bin/bash" ; ls -p1 | sort -d -t '/' -k 2 | tr '\n' ',' | sed 's/,$/\n/' )
